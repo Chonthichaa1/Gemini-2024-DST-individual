@@ -29,5 +29,5 @@ jobs:
         run: |
           mvn sonar:sonar \
             -Dsonar.projectKey=Chonthichaa1_Gemini-2024-DST-individual2 \
-            -Dsonar.organization=Chonthicha \
+            -Dsonar.organization=chonthicha \ 
             -Dsonar.host.url=https://sonarcloud.io
