@@ -1,11 +1,13 @@
 name: SonarCloud Analysis
 
 on:
-  pull_request: 
+  pull_request:
+    paths:
+      - '**/*.java' 
 
 jobs:
   sonar:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,5 +31,5 @@ jobs:
         run: |
           mvn sonar:sonar \
             -Dsonar.projectKey=Chonthichaa1_Gemini-2024-DST-individual2 \
-            -Dsonar.organization=chonthicha \ 
+            -Dsonar.organization=Chonthicha \
             -Dsonar.host.url=https://sonarcloud.io
